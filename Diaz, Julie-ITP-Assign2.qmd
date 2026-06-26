@@ -1,0 +1,201 @@
+---
+title: "ITP-Shopify Store - Assignment 2 - Store Concept and Initial Shopify Setup"
+author: "Julie Diaz"
+date: today
+format: 
+  html: 
+    toc: true
+    toc-depth: 4
+    toc-expand: true
+    number-sections: true
+    code-link: true
+    embed-resources: true
+    theme: flatly
+    css: styles.css
+    code-tools: true
+    code-overflow: wrap
+editor: visual
+execute: 
+  freeze: auto
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+# Store Name and Concept {#sec-concept}
+
+::: {.callout-note icon="false"}
+## Juke Vintage
+
+**A curated secondhand and vintage clothing boutique based in California.**
+:::
+
+**Juke Vintage** is a pre-loved fashion shop offering handpicked secondhand pieces - from vintage staples and Y2K throwbacks to pre-owned activewear and designer accessories. Every item is personally sourced and curated with an eye for quality, style, and uniqueness. The store's philosophy is simple: *cute clothes need new homes.*
+
+The store operates as a prototype Shopify storefront inspired by the seller's real Depop shop (`jukedz`), which has 14 sold items and 24 active listings across clothing, shoes, and accessories. Juke Vintage translates that personal resale experience into a more polished, brand-forward e-commerce format - without processing real payments or conducting real transactions.
+
+> *"Pre-loved pieces • New to you"* - Juke Vintage's marquee tagline
+
+The store uses the **Canyon theme** from Shopify's theme library, customized with a dark charcoal and deep crimson color palette to reflect a cool, editorial, and distinctly California vintage aesthetic.
+
+------------------------------------------------------------------------
+
+# Target Customer {#sec-customer}
+
+## Customer Profile
+
+Juke Vintage's target customer is a **Gen Z or young Millennial woman, aged 18-28**, living in California or a similarly trend-forward urban or suburban area. She is college-aged or recently graduated, budget-conscious but style-savvy, and deeply embedded in secondhand and thrift culture.
+
+::: panel-tabset
+### Demographics
+
+| Attribute | Description                               |
+|-----------|-------------------------------------------|
+| Age       | 18-28                                     |
+| Gender    | Primarily women                           |
+| Location  | California and major US cities            |
+| Income    | Student or entry-level (\$15K-\$45K/year) |
+| Education | Currently in college or recent graduate   |
+
+### Lifestyle
+
+| Attribute  | Description                                      |
+|------------|--------------------------------------------------|
+| Values     | Sustainability, individuality, anti-fast-fashion |
+| Interests  | Fashion, thrifting, social media, music          |
+| Influences | TikTok, Instagram, Pinterest, Depop              |
+| Style      | Vintage, Y2K, Cali-casual, mix-and-match         |
+
+### Shopping Behavior
+
+| Attribute          | Description                                     |
+|--------------------|-------------------------------------------------|
+| Discovery          | TikTok hauls, Instagram explore, Depop browsing |
+| Motivation         | Unique pieces, brand names at lower prices      |
+| Device             | Primarily mobile/phone                          |
+| Values in purchase | Price, condition, aesthetic, seller trust       |
+:::
+
+This customer doesn't want to wear the same outfit as everyone else. She hunts for pieces that feel personal and curated - and she's willing to buy pre-loved if the item is in good condition and the seller feels trustworthy. She has likely already shopped on Depop or Poshmark, making Shopify's more polished storefront a natural upgrade in her shopping experience.
+
+------------------------------------------------------------------------
+
+# Product Category Plan {#sec-categories}
+
+Juke Vintage carries **six product categories**, drawn directly from the seller's active and sold inventory on Depop:
+
+::: {.callout-tip icon="false"}
+## Product Categories at a Glance
+
+Six curated categories covering the full wardrobe from head to toe.
+:::
+
+```{r categories-table}
+library(knitr)
+
+categories <- data.frame(
+  Category = c("Tops & Tanks", "Bottoms", "Dresses", "Shoes & Boots", 
+               "Bags & Accessories", "Activewear"),
+  Description = c(
+    "Cami tops, sweater vests, blouses, knit tops - the core of any outfit",
+    "Vintage jeans (light wash, dark wash), trousers, and casual pants",
+    "Midi, mini, and maxi dresses for going out or everyday wear",
+    "Branded sneakers, Dr. Martens, boots, and loafers",
+    "Crossbody bags, tote bags, coach purses, hats, and jewelry",
+    "Pre-loved Alo Yoga, sports bras, tanks, and matching sets"
+  ),
+  `Example Items` = c(
+    "Argyle sweater vest ($50), Knit cami ($10)",
+    "Light wash jeans ($22), Dark wash jeans ($22)",
+    "White button-up dress ($85), Navy mini dress ($19)",
+    "Nike Air sneakers ($65), Dr. Martens ($79), Leather boots ($25)",
+    "Coach hobo bag ($200), Heart crossbody ($13), Alo tote ($53)",
+    "Alo sports bra ($27), Alo tank ($32), Alo cap ($21)"
+  ),
+  stringsAsFactors = FALSE
+)
+
+kable(categories, 
+      col.names = c("Category", "Description", "Example Items"),
+      caption = "Juke Vintage Product Categories")
+```
+
+### Category Rationale
+
+The six categories were determined by analyzing both **active listings** and **sold items** from the seller's Depop store. Notably, **Activewear** emerged as a strong category based on sold data - multiple Alo Yoga pieces sold quickly, suggesting high demand among the target customer base.[^1]
+
+[^1]: Sold item analysis conducted by reviewing the jukedz Depop seller profile, which showed 14 total sales with a notable concentration of Alo Yoga activewear and branded footwear.
+
+------------------------------------------------------------------------
+
+# Shopify Setup Evidence {#sec-setup}
+
+## Admin Dashboard
+
+The following screenshot shows the Shopify admin dashboard for **Juke Vintage** (`bqbvqz-mv.myshopify.com`), confirming the store was successfully created and named:
+
+![Shopify Admin Dashboard showing the Juke Vintage store](Admin_Dashboard_Screenshot.png){#fig-admin fig-alt="Shopify admin dashboard for Juke Vintage" width="100%"}
+
+As shown in @fig-admin, the admin panel includes full access to Orders, Products, Customers, Analytics, and the Online Store editor - all the tools needed to manage a functional e-commerce store.
+
+## Selected Theme
+
+The **Canyon theme** was selected from the Shopify Theme Store. It was chosen for its bold typographic marquee feature, editorial image layouts, and support for the high-contrast dark/cream color palette that matches the Juke Vintage brand aesthetic:
+
+![Canyon theme selected and customized in Shopify theme editor](Selected_theme_page_Screenshot.png){#fig-theme fig-alt="Canyon theme customization page in Shopify" width="100%"}
+
+@fig-theme shows the theme editor with the marquee text set to *"Cute clothes • Need new homes"* - a direct reference to the seller's Depop bio and brand voice.
+
+## Homepage Draft
+
+The homepage was customized with the following design decisions:
+
+::: {.callout-important icon="false"}
+## Design Decisions
+
+-   **Hero image**: A photo of a woman browsing a clothing rack - energetic, relatable, and on-brand
+-   **Marquee text**: "Pre-loved pieces • New to you" scrolling across the hero
+-   **Color palette**: Dark charcoal (#2d2d2d), deep crimson (#8b0000), and warm cream (#f5f0eb)
+-   **Brand copy**: "Thrifted. Curated. Yours." and "Hi, I'm Julie and I find the cutest things."
+-   **Featured products**: Alo Yoga tote, Dr. Martens, and Alo sports bra displayed in a product grid
+:::
+
+![Juke Vintage homepage draft showing hero image, marquee, and featured products](Homepage_draft-customization_page_screenshot.png){#fig-homepage fig-alt="Juke Vintage Shopify homepage draft" width="100%"}
+
+The homepage shown in @fig-homepage reflects a complete brand story - from the scrolling marquee tagline to the personal "About" section at the bottom featuring Julie's introduction as the curator.
+
+------------------------------------------------------------------------
+
+# Connection to CPP Farm Store {#sec-cpp}
+
+::: {.callout-note icon="false"}
+## CPP Farm Store Consulting Connection
+:::
+
+Building Juke Vintage on Shopify provided direct, hands-on insight into the decisions that any small retail operation - including the **CPP Farm Store** at Cal Poly Pomona - must make when establishing or improving an e-commerce presence. Defining a clear store concept forced me to think critically about **niche positioning**: Juke Vintage isn't just a "clothing store," it's a curated secondhand boutique targeting a specific customer with specific values. This same thinking applies to CPP Farm Store, which must define what makes its products distinct - locally grown, student-produced, and agriculturally educational - and communicate that identity clearly to its customer base. Choosing a theme and customizing the homepage also revealed how much **visual merchandising and brand storytelling** matter in online retail; the layout, copy, color, and imagery all work together to build trust and drive purchase intent. For CPP Farm Store, this suggests that even small decisions like homepage layout, product photography quality, and tagline copy can significantly impact how customers perceive and engage with the store. Finally, building out product categories reinforced the importance of **inventory organization** - something CPP Farm Store would benefit from as it potentially expands its online catalog across produce, pantry goods, and student-made products.
+
+------------------------------------------------------------------------
+
+# Appendix {#sec-appendix}
+
+## Grading Criteria
+
+| Criteria                     | Points Possible |
+|------------------------------|-----------------|
+| Clear store name and concept | 4               |
+| Target customer description  | 4               |
+| Product category plan        | 4               |
+| Shopify setup screenshots    | 4               |
+| CPP Farm Store connection    | 4               |
+| **Total**                    | **20**          |
+
+## Links
+
+::: {.callout-note icon="false"}
+## Project Links
+
+-   **GitHub Pages (Live Report):** <https://jukedz.github.io/ITP/assign2>
+-   **GitHub Repository:** <https://github.com/jukedz/ITP>
+-   **Juke Vintage Shopify Store:** [https://bqbvqz-mv.myshopify.c](https://bqbvqz-mv.myshopify.com)om
+:::

@@ -1,0 +1,286 @@
+/* ============================================
+   JUKE VINTAGE - Custom Report Styles
+   Matching the Shopify store aesthetic:
+   Dark charcoal + Deep crimson + Warm cream
+   ============================================ */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+
+/* Color Variables */
+:root {
+  --juke-dark: #1e1e1e;
+  --juke-charcoal: #2d2d2d;
+  --juke-crimson: #8b0000;
+  --juke-crimson-light: #a50000;
+  --juke-cream: #f5f0eb;
+  --juke-warm-white: #faf8f5;
+  --juke-text-light: #e8e0d8;
+  --juke-text-muted: #9e9e9e;
+}
+
+/* Body & Background */
+body {
+  background-color: var(--juke-dark) !important;
+  color: var(--juke-text-light) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif !important;
+  color: var(--juke-cream) !important;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  border-bottom: 2px solid var(--juke-crimson) !important;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  color: var(--juke-cream) !important;
+}
+
+/* Links */
+a {
+  color: var(--juke-crimson-light) !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--juke-cream) !important;
+  text-decoration: underline;
+}
+
+/* TOC Sidebar */
+#TOC {
+  background-color: var(--juke-charcoal) !important;
+  border-right: 2px solid var(--juke-crimson) !important;
+  padding: 1.5rem 1rem;
+}
+
+#TOC a {
+  color: var(--juke-text-light) !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+}
+
+#TOC a:hover {
+  color: var(--juke-cream) !important;
+}
+
+#TOC .active {
+  color: var(--juke-crimson-light) !important;
+  font-weight: 500;
+}
+
+/* Tables */
+table {
+  background-color: var(--juke-charcoal) !important;
+  border: 1px solid var(--juke-crimson) !important;
+  color: var(--juke-text-light) !important;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: var(--juke-crimson) !important;
+  color: var(--juke-cream) !important;
+}
+
+thead th {
+  color: var(--juke-cream) !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1rem;
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(139, 0, 0, 0.3) !important;
+}
+
+tbody tr:hover {
+  background-color: rgba(139, 0, 0, 0.15) !important;
+}
+
+tbody td {
+  padding: 0.65rem 1rem;
+  color: var(--juke-text-light) !important;
+}
+
+/* Callout Blocks */
+.callout {
+  border-radius: 4px !important;
+  border-left-width: 4px !important;
+}
+
+.callout-note {
+  background-color: rgba(45, 45, 45, 0.8) !important;
+  border-left-color: var(--juke-crimson) !important;
+}
+
+.callout-tip {
+  background-color: rgba(30, 30, 30, 0.9) !important;
+  border-left-color: #6b8e6b !important;
+}
+
+.callout-important {
+  background-color: rgba(139, 0, 0, 0.15) !important;
+  border-left-color: var(--juke-crimson) !important;
+}
+
+.callout-title {
+  color: var(--juke-cream) !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.callout-body {
+  color: var(--juke-text-light) !important;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid var(--juke-crimson) !important;
+  background-color: var(--juke-charcoal) !important;
+  padding: 1rem 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  color: var(--juke-cream) !important;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Panel Tabset */
+.nav-tabs {
+  border-bottom: 2px solid var(--juke-crimson) !important;
+}
+
+.nav-tabs .nav-link {
+  color: var(--juke-text-muted) !important;
+  border: none !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.6rem 1.2rem;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--juke-cream) !important;
+  border-bottom: 2px solid var(--juke-crimson) !important;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--juke-crimson) !important;
+  color: var(--juke-cream) !important;
+  border-radius: 4px 4px 0 0;
+}
+
+.tab-content {
+  background-color: var(--juke-charcoal) !important;
+  padding: 1.5rem;
+  border: 1px solid rgba(139, 0, 0, 0.3);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+/* Images */
+img {
+  border-radius: 4px;
+  border: 1px solid rgba(139, 0, 0, 0.4);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* Figure captions */
+figcaption, .figure-caption {
+  color: var(--juke-text-muted) !important;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Horizontal rule */
+hr {
+  border-color: var(--juke-crimson) !important;
+  opacity: 0.4;
+  margin: 2rem 0;
+}
+
+/* Main content area */
+#quarto-content {
+  background-color: var(--juke-dark) !important;
+}
+
+.quarto-title {
+  border-bottom: 2px solid var(--juke-crimson);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quarto-title-meta {
+  color: var(--juke-text-muted) !important;
+  font-size: 0.85rem;
+}
+
+/* Section numbers */
+.header-section-number {
+  color: var(--juke-crimson) !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+/* Footnotes */
+.footnote-ref {
+  color: var(--juke-crimson-light) !important;
+}
+
+.footnotes {
+  border-top: 1px solid rgba(139, 0, 0, 0.3);
+  margin-top: 3rem;
+  padding-top: 1rem;
+  color: var(--juke-text-muted) !important;
+  font-size: 0.85rem;
+}
+
+/* Bold text */
+strong {
+  color: var(--juke-cream) !important;
+  font-weight: 600;
+}
+
+/* Code blocks (minimal since not a code-heavy assignment) */
+code {
+  background-color: var(--juke-charcoal) !important;
+  color: #d4a5a5 !important;
+  border-radius: 3px;
+  padding: 0.1rem 0.3rem;
+  font-size: 0.85em;
+}
+
+pre {
+  background-color: var(--juke-charcoal) !important;
+  border: 1px solid rgba(139, 0, 0, 0.3) !important;
+  border-radius: 4px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--juke-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--juke-crimson);
+  border-radius: 3px;
+}
